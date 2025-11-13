@@ -5,8 +5,10 @@ import { Button } from "./ui/button";
 import { ExternalLink } from "lucide-react";
 import previewImage from "@/assets/gallery/photo-1.jpg";
 
-const YOUTUBE_EMBED_URL = "https://www.youtube.com/embed/ymgVN41raIw";
-const YOUTUBE_WATCH_URL = "https://www.youtube.com/watch?v=ymgVN41raIw";
+const VIDEO_EMBED_URL =
+  "https://rutube.ru/play/embed/3ef26e8f702b2052df66f7dd54885636?p=b7eWyN5wVSGWgk6yTQgqHg";
+const VIDEO_WATCH_URL =
+  "https://rutube.ru/video/private/3ef26e8f702b2052df66f7dd54885636/?p=b7eWyN5wVSGWgk6yTQgqHg";
 
 export const VideoSection = () => {
   const ref = useRef(null);
@@ -55,7 +57,7 @@ export const VideoSection = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          {/* Desktop/Tablet YouTube embed */}
+          {/* Desktop/Tablet RuTube embed */}
           <motion.div
             className="hidden md:block w-full max-w-5xl aspect-video rounded-[24px] overflow-hidden shadow-[0_25px_60px_-20px_rgba(217,148,85,0.45)] border border-primary/40 backdrop-blur-sm"
             initial={{ opacity: 0, scale: 0.96 }}
@@ -63,7 +65,7 @@ export const VideoSection = () => {
             transition={{ duration: 0.8, delay: 0.2, ease: "easeOut" }}
           >
             <iframe
-              src={YOUTUBE_EMBED_URL}
+              src={VIDEO_EMBED_URL}
               className="w-full h-full"
               title="Бренди — Живое выступление"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
@@ -72,9 +74,9 @@ export const VideoSection = () => {
             />
           </motion.div>
 
-          {/* Mobile preview image linking to YouTube */}
+          {/* Mobile preview image linking to RuTube */}
           <motion.a
-            href={YOUTUBE_WATCH_URL}
+            href={VIDEO_WATCH_URL}
             target="_blank"
             rel="noopener noreferrer"
             className="md:hidden w-full max-w-5xl aspect-video rounded-[24px] overflow-hidden shadow-[0_20px_40px_-15px_rgba(217,148,85,0.5)] border border-primary/30 relative group"
@@ -96,7 +98,7 @@ export const VideoSection = () => {
               whileHover={{ opacity: 1 }}
             >
               <div className="flex items-center gap-3 bg-black/70 text-white px-6 py-3 rounded-full font-bebas tracking-wide text-lg shadow-lg border border-white/10">
-                <span className="text-primary">▶</span> Смотреть выступление
+                <span className="text-primary">▶</span> Смотреть на RuTube
               </div>
             </motion.div>
             <motion.div
@@ -118,8 +120,8 @@ export const VideoSection = () => {
               size="lg"
               className="hidden md:inline-flex bg-primary hover:bg-primary/90 text-black font-bebas text-lg md:text-xl px-6 py-5 md:px-8 md:py-6 rounded-full shadow-[0_15px_35px_-15px_rgba(217,148,85,0.7)] hover:shadow-primary/40 transition-all duration-300 active:scale-95"
             >
-              <a href={YOUTUBE_WATCH_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                Смотреть на YouTube
+              <a href={VIDEO_WATCH_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
+                Смотреть на RuTube
                 <ExternalLink className="w-5 h-5" />
               </a>
             </Button>
@@ -133,7 +135,7 @@ export const VideoSection = () => {
                 animate={{ opacity: [0.6, 1, 0.6] }}
                 transition={{ duration: 2.6, repeat: Infinity, ease: "easeInOut" }}
               >
-                тапни, чтобы открыть YouTube
+                тапни, чтобы открыть RuTube
               </motion.span>
             </div>
           </motion.div>

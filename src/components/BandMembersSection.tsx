@@ -10,32 +10,32 @@ import filimonPhoto from "@/assets/members/filimon-basov.jpg";
 
 const members = [
   {
-    name: "Ник Бренди",
-    role: "Вокал, гитара",
+    name: "Ник",
+    role: "Вокал и гитара. Создатель",
     image: nikolayPhoto,
     objectPosition: "50% 20%",
   },
   {
-    name: "Илья Ильич",
-    role: "Гитара, бэк-вокал",
+    name: "Ильич",
+    role: "Гитара и бэк-вокал. Архитектор",
     image: ilyaPhoto,
     objectPosition: "50% 22%",
   },
   {
-    name: "Димуля",
-    role: "Соло-гитара и огненные рифы",
+    name: "Дима",
+    role: "Соло-гитара и бэк-вокал. Энергетик",
     image: alexeyPhoto,
     objectPosition: "50% 18%",
   },
   {
     name: "Петр",
-    role: "Бас-гитара",
+    role: "Бас-гитара и бэк-вокал. Гравитация",
     image: filimonPhoto,
     objectPosition: "50% 10%",
   },
   {
-    name: "Александр",
-    role: "Ударные",
+    name: "Саня",
+    role: "Ударные и бэк-вокал. Сердцебиение",
     image: andreyPhoto,
     objectPosition: "50% 22%",
   },

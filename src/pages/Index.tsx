@@ -29,7 +29,7 @@ const Index = () => {
         <footer className="relative py-12 px-4 text-center border-t border-primary/20">
           <div className="container mx-auto">
             <p className="font-montserrat text-muted-foreground">
-              © 2024 Бренди. Музыка, которая льётся.
+              © 2025 БРЕНДИ. Пой до дна!
             </p>
           </div>
         </footer>

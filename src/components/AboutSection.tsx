@@ -24,46 +24,14 @@ export const AboutSection = () => {
         </motion.h2>
 
         <motion.div
-          className="space-y-4 md:space-y-6 text-base sm:text-lg md:text-xl font-montserrat text-foreground/90 leading-relaxed"
+          className="text-base sm:text-lg md:text-xl font-montserrat text-foreground/90 leading-relaxed"
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8, delay: 0.2 }}
         >
-          <motion.p
-            className="text-center text-2xl sm:text-3xl md:text-4xl font-bebas text-primary mb-6 md:mb-8 tracking-wider"
-            initial={{ opacity: 0, scale: 0.9 }}
-            animate={isInView ? { opacity: 1, scale: 1 } : {}}
-            transition={{ duration: 0.8, delay: 0.3 }}
-          >
-            Неразбавленный рок-н-ролл из Петербурга
-          </motion.p>
-
           <p className="text-center">
-            Мы — <span className="text-primary font-bold">«Бренди»</span>, пять музыкантов, которые верят в живой звук и честный драйв.
+            Мы — БРЕНДИ, рок-группа из Петербурга. Наши песни — о жизни без прикрас, о силе и уязвимости, о любви и расставании. Наша музыка — это коктейль из звенящего вокала, цепляющих гитарных риффов, упругого баса и ритмичной пульсации ударных. Пропорции выверены, эффект — сногсшибателен. Хочешь почувствовать вкус неразбавленного петербургского рока? Приходи на наш концерт, закажи бокал для вокала и вместе с нами пой до дна!
           </p>
-
-          <p className="text-center">
-            Наши концерты — это исповедь усилителей, тёплый вокал и подписи на пластинках, оставленные после каждого сета.
-          </p>
-
-          <p className="text-center">
-            Мы рассказываем истории о городе на Неве, где вдохновение смешивается с дождём и неоном ночных проспектов.
-          </p>
-
-          <p className="text-center text-primary font-bebas text-xl md:text-2xl tracking-wider">
-            Пой до дна! Оставь сомнения за дверью клуба и пой вместе с нами.
-          </p>
-
-          <motion.div
-            className="pt-8"
-            initial={{ opacity: 0, scale: 0.8 }}
-            animate={isInView ? { opacity: 1, scale: 1 } : {}}
-            transition={{ duration: 0.8, delay: 0.5 }}
-          >
-            <p className="text-center text-accent italic">
-              Каждое выступление — это атмосфера, эмоция и жизнь, которые хочется забрать с собой.
-            </p>
-          </motion.div>
         </motion.div>
       </div>
     </section>
