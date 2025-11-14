@@ -6,8 +6,6 @@ import photo1 from "@/assets/gallery/photo-1.jpg";
 import photo2 from "@/assets/gallery/photo-2.jpg";
 import photo3 from "@/assets/gallery/photo-3.jpg";
 import photo4 from "@/assets/gallery/photo-4.jpg";
-import photo5 from "@/assets/gallery/photo-5.jpg";
-import photo6 from "@/assets/gallery/photo-6.jpg";
 import photo7 from "@/assets/gallery/photo-7.jpg";
 import photo8 from "@/assets/gallery/photo-8.jpg";
 import photo9 from "@/assets/gallery/photo-9.jpg";
@@ -29,14 +27,6 @@ const photos = [
   {
     url: photo4,
     caption: "Выступление группы",
-  },
-  {
-    url: photo5,
-    caption: "На концерте",
-  },
-  {
-    url: photo6,
-    caption: "Живая музыка",
   },
   {
     url: photo7,
@@ -105,13 +95,6 @@ export const PhotoGallerySection = () => {
                   transform: "translateZ(0)",
                 }}
               />
-              
-              {/* Overlay on hover */}
-              <div className="absolute inset-0 bg-gradient-to-t from-background via-background/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300 flex items-end justify-center pb-4 md:pb-6">
-                <p className="text-accent font-montserrat text-sm sm:text-base md:text-lg px-2">
-                  {photo.caption}
-                </p>
-              </div>
 
               {/* Gold flicker effect */}
               <motion.div
