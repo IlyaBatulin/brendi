@@ -2,11 +2,38 @@ import { motion } from "framer-motion";
 import { Music2 } from "lucide-react";
 import { Button } from "./ui/button";
 import brendiLogo from "@/assets/brendi-logo.svg";
+import { useEffect, useState, useRef } from "react";
 
 // Версия видео для обхода кэша браузера - обновляйте при изменении видео
 const VIDEO_VERSION = "v3";
 
 export const HeroSection = () => {
+  const [isMobile, setIsMobile] = useState(false);
+  const videoRef = useRef<HTMLVideoElement>(null);
+
+  useEffect(() => {
+    const checkMobile = () => {
+      setIsMobile(window.innerWidth <= 768);
+    };
+
+    checkMobile();
+    window.addEventListener("resize", checkMobile);
+
+    return () => window.removeEventListener("resize", checkMobile);
+  }, []);
+
+  useEffect(() => {
+    if (videoRef.current) {
+      const video = videoRef.current;
+      const videoSrc = isMobile
+        ? `/videos/brendi-mobile1.mp4?v=${VIDEO_VERSION}`
+        : `/videos/brendi-desktop.mp4?v=${VIDEO_VERSION}`;
+      
+      video.src = videoSrc;
+      video.load();
+    }
+  }, [isMobile]);
+
   const scrollToVideo = () => {
     document.getElementById("video")?.scrollIntoView({ behavior: "smooth" });
   };
@@ -23,6 +50,7 @@ export const HeroSection = () => {
       {/* Video Background */}
       <div className="absolute inset-0 bg-black">
         <video
+          ref={videoRef}
           autoPlay
           loop
           muted
@@ -34,11 +62,8 @@ export const HeroSection = () => {
             transform: "translateZ(0)",
             willChange: "opacity",
           }}
-          key={`video-${VIDEO_VERSION}`}
-        >
-          <source src={`/videos/brendi-mobile1.mp4?v=${VIDEO_VERSION}`} type="video/mp4" media="(max-width: 768px)" />
-          <source src={`/videos/brendi-desktop.mp4?v=${VIDEO_VERSION}`} type="video/mp4" />
-        </video>
+          key={`video-${VIDEO_VERSION}-${isMobile ? "mobile" : "desktop"}`}
+        />
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-background" />
       </div>
 
