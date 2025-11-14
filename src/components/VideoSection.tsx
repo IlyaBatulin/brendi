@@ -1,8 +1,6 @@
 import { motion } from "framer-motion";
 import { useInView } from "framer-motion";
 import { useRef } from "react";
-import { Button } from "./ui/button";
-import { ExternalLink } from "lucide-react";
 import previewImage from "@/assets/gallery/photo-1.jpg";
 
 const VIDEO_EMBED_URL =
@@ -42,14 +40,19 @@ export const VideoSection = () => {
       </div>
 
       <div className="container mx-auto max-w-7xl relative z-10 px-4">
-        <motion.h2
-          className="text-3xl sm:text-4xl md:text-6xl font-bebas text-center mb-10 md:mb-16 text-foreground tracking-wider"
+        <motion.div
+          className="text-center mb-10 md:mb-16"
           initial={{ opacity: 0, y: 30 }}
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          Живые выступления
-        </motion.h2>
+          <h2 className="text-3xl sm:text-4xl md:text-6xl font-bebas text-foreground tracking-wider mb-2">
+            БРЕНДИ - Грунтовка
+          </h2>
+          <p className="text-2xl sm:text-3xl md:text-4xl font-bebas text-primary tracking-wider">
+            LIVE
+          </p>
+        </motion.div>
 
         <motion.div
           className="flex flex-col items-center gap-8 md:gap-12"
@@ -108,37 +111,6 @@ export const VideoSection = () => {
               transition={{ duration: 0.4 }}
             />
           </motion.a>
-
-          <motion.div
-            className="flex flex-col items-center gap-4 text-center w-full"
-            initial={{ opacity: 0, y: 20 }}
-            animate={isInView ? { opacity: 1, y: 0 } : {}}
-            transition={{ duration: 0.8, delay: 0.4 }}
-          >
-            <Button
-              asChild
-              size="lg"
-              className="hidden md:inline-flex bg-primary hover:bg-primary/90 text-black font-bebas text-lg md:text-xl px-6 py-5 md:px-8 md:py-6 rounded-full shadow-[0_15px_35px_-15px_rgba(217,148,85,0.7)] hover:shadow-primary/40 transition-all duration-300 active:scale-95"
-            >
-              <a href={VIDEO_WATCH_URL} target="_blank" rel="noopener noreferrer" className="flex items-center gap-2">
-                Смотреть на RuTube
-                <ExternalLink className="w-5 h-5" />
-              </a>
-            </Button>
-
-            <div className="flex flex-col items-center gap-3">
-              <p className="text-sm sm:text-base md:text-lg font-montserrat text-muted-foreground/80 max-w-3xl">
-                Неразбавленный рок-н-ролл из Петербурга в живом исполнении. Подпевай, аплодируй, пой до дна — и обязательно делись ссылкой с друзьями.
-              </p>
-              <motion.span
-                className="md:hidden inline-flex items-center gap-2 text-sm uppercase tracking-[0.3em] text-primary/80 font-bebas"
-                animate={{ opacity: [0.6, 1, 0.6] }}
-                transition={{ duration: 2.6, repeat: Infinity, ease: "easeInOut" }}
-              >
-                тапни, чтобы открыть RuTube
-              </motion.span>
-            </div>
-          </motion.div>
         </motion.div>
       </div>
     </section>

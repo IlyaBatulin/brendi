@@ -9,6 +9,9 @@ import photo4 from "@/assets/gallery/photo-4.jpg";
 import photo5 from "@/assets/gallery/photo-5.jpg";
 import photo6 from "@/assets/gallery/photo-6.jpg";
 import photo7 from "@/assets/gallery/photo-7.jpg";
+import photo8 from "@/assets/gallery/photo-8.jpg";
+import photo9 from "@/assets/gallery/photo-9.jpg";
+import photo10 from "@/assets/gallery/photo-10.jpg";
 
 const photos = [
   {
@@ -38,6 +41,18 @@ const photos = [
   {
     url: photo7,
     caption: "Шоу продолжается",
+  },
+  {
+    url: photo8,
+    caption: "На сцене",
+  },
+  {
+    url: photo9,
+    caption: "Концерт",
+  },
+  {
+    url: photo10,
+    caption: "Выступление",
   },
 ];
 
