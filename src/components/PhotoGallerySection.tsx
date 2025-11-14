@@ -115,16 +115,11 @@ export const PhotoGallerySection = () => {
       <Dialog open={!!selectedPhoto} onOpenChange={() => setSelectedPhoto(null)}>
         <DialogContent className="max-w-4xl bg-background/95 border-primary/30">
           {selectedPhoto && (
-            <div className="space-y-4">
-              <img
-                src={selectedPhoto.url}
-                alt={selectedPhoto.caption}
-                className="w-full rounded-lg"
-              />
-              <p className="text-center text-xl font-montserrat text-accent">
-                {selectedPhoto.caption}
-              </p>
-            </div>
+            <img
+              src={selectedPhoto.url}
+              alt={selectedPhoto.caption}
+              className="w-full rounded-lg"
+            />
           )}
         </DialogContent>
       </Dialog>
