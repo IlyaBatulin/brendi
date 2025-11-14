@@ -3,6 +3,9 @@ import { Music2 } from "lucide-react";
 import { Button } from "./ui/button";
 import brendiLogo from "@/assets/brendi-logo.svg";
 
+// Версия видео для обхода кэша браузера - обновляйте при изменении видео
+const VIDEO_VERSION = "v2";
+
 export const HeroSection = () => {
   const scrollToVideo = () => {
     document.getElementById("video")?.scrollIntoView({ behavior: "smooth" });
@@ -31,9 +34,10 @@ export const HeroSection = () => {
             transform: "translateZ(0)",
             willChange: "opacity",
           }}
+          key={`video-${VIDEO_VERSION}`}
         >
-          <source src="/videos/brendi-mobile.mp4" type="video/mp4" media="(max-width: 768px)" />
-          <source src="/videos/brendi-desktop.mp4" type="video/mp4" />
+          <source src={`/videos/brendi-mobile.mp4?v=${VIDEO_VERSION}`} type="video/mp4" media="(max-width: 768px)" />
+          <source src={`/videos/brendi-desktop.mp4?v=${VIDEO_VERSION}`} type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-background" />
       </div>
