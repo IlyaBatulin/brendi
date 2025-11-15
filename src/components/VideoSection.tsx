@@ -46,7 +46,7 @@ export const VideoSection = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <h2 className="text-3xl sm:text-4xl md:text-6xl font-bebas text-foreground tracking-wider mb-2">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-bebas text-primary tracking-wider mb-2">
             БРЕНДИ - Грунтовка
           </h2>
           <p className="text-2xl sm:text-3xl md:text-4xl font-bebas text-primary tracking-wider">

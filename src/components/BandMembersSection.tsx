@@ -11,31 +11,31 @@ import filimonPhoto from "@/assets/members/filimon-basov.jpg";
 const members = [
   {
     name: "Ник",
-    role: "Вокал и гитара. Создатель",
+    role: "Вдохновение",
     image: nikolayPhoto,
     objectPosition: "50% 20%",
   },
   {
     name: "Ильич",
-    role: "Гитара и бэк-вокал. Архитектор",
+    role: "Архитектура",
     image: ilyaPhoto,
     objectPosition: "50% 22%",
   },
   {
-    name: "Дима",
-    role: "Соло-гитара и бэк-вокал. Энергетик",
+    name: "Димуля",
+    role: "Энергия",
     image: alexeyPhoto,
     objectPosition: "50% 18%",
   },
   {
     name: "Петр",
-    role: "Бас-гитара и бэк-вокал. Гравитация",
+    role: "Гравитация",
     image: filimonPhoto,
     objectPosition: "50% 10%",
   },
   {
     name: "Саня",
-    role: "Ударные и бэк-вокал. Сердцебиение",
+    role: "Пульс",
     image: andreyPhoto,
     objectPosition: "50% 22%",
   },
@@ -59,7 +59,7 @@ export const BandMembersSection = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          Участники
+          Состав
         </motion.h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-5 gap-6 md:gap-8">

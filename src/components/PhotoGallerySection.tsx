@@ -13,6 +13,18 @@ import photo10 from "@/assets/gallery/photo-10.jpg";
 
 const photos = [
   {
+    url: photo8,
+    caption: "На сцене",
+  },
+  {
+    url: photo9,
+    caption: "Концерт",
+  },
+  {
+    url: photo10,
+    caption: "Выступление",
+  },
+  {
     url: photo1,
     caption: "Живое выступление",
   },
@@ -31,18 +43,6 @@ const photos = [
   {
     url: photo7,
     caption: "Шоу продолжается",
-  },
-  {
-    url: photo8,
-    caption: "На сцене",
-  },
-  {
-    url: photo9,
-    caption: "Концерт",
-  },
-  {
-    url: photo10,
-    caption: "Выступление",
   },
 ];
 
