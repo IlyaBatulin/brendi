@@ -4,7 +4,7 @@ import { Button } from "./ui/button";
 import brendiLogo from "@/assets/brendi-logo.svg";
 
 // Версия видео для обхода кэша браузера - обновляйте при изменении видео
-const VIDEO_VERSION = "v4";
+const VIDEO_VERSION = "v5";
 
 export const HeroSection = () => {
   const scrollToVideo = () => {
@@ -36,7 +36,7 @@ export const HeroSection = () => {
           }}
           key={`video-${VIDEO_VERSION}`}
         >
-          <source src={`/videos/Ultracinematic.mp4?v=${VIDEO_VERSION}`} type="video/mp4" />
+          <source src={`/videos/Cinematic_Whiskey_Pour_and_Guitar_Solo.mp4?v=${VIDEO_VERSION}`} type="video/mp4" />
         </video>
         <div className="absolute inset-0 bg-gradient-to-b from-black/60 via-black/40 to-background" />
       </div>
