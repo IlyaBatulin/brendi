@@ -46,8 +46,8 @@ export const VideoSection = () => {
           animate={isInView ? { opacity: 1, y: 0 } : {}}
           transition={{ duration: 0.8 }}
         >
-          <p className="text-2xl sm:text-3xl md:text-4xl font-bebas text-primary tracking-wider mb-2">
-            БРЕНДИ - Грунтовка
+          <p className="text-2xl sm:text-3xl md:text-4xl font-bebas text-primary tracking-wider">
+            БРЕНДИ-ГРУНТОВКА
           </p>
           <p className="text-2xl sm:text-3xl md:text-4xl font-bebas text-primary tracking-wider">
             LIVE
@@ -70,7 +70,7 @@ export const VideoSection = () => {
             <iframe
               src={VIDEO_EMBED_URL}
               className="w-full h-full"
-              title="Бренди — Живое выступление"
+              title="БРЕНДИ — Живое выступление"
               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
               allowFullScreen
               loading="lazy"
@@ -90,7 +90,7 @@ export const VideoSection = () => {
           >
             <img
               src={previewImage}
-              alt="Бренди — живое выступление"
+              alt="БРЕНДИ — живое выступление"
               className="w-full h-full object-cover"
               loading="lazy"
             />

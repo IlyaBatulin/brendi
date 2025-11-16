@@ -35,7 +35,7 @@ const members = [
   },
   {
     name: "Саня",
-    role: "Пульс",
+    role: "Пульсация",
     image: andreyPhoto,
     objectPosition: "50% 22%",
   },
